@@ -6,3 +6,4 @@
 
 # Python
 ## [California Wildfires, 2000-2023: Exploratory Data Analysis](https://github.com/mpeery21/mpeery21.github.io/blob/main/California%20Wildfires%20Exploratory%20Data%20Analysis.ipynb)
+#### Tools Used: pandas, matplotlib, seaborn
