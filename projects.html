@@ -1,64 +1,101 @@
-<!-- PROJECTS / MY WORK SECTION -->
-      <div id="my-work-section">
-        <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
-        <span class="subheader-text">My Work / My Projects</span>
-
-        <div class="projects-container">
-          <!-- 
-            TODO
-
-            This is where the project cards live. Here's a base level project card for you to copy:
-            <div class="project-card">
-              <img src="./assets/images/IMAGE_NAME" class="project-image">
-              <div class="project-card-text-container">
-                <div class="subheader-text project-title">PROJECT_NAME</div>
-                <div class="body-text project-card-text">SMALL_PROJECT_DESCRIPTION</div>
-              </div>
-              <a class="button" href="./project-pages/PROJECT_PAGE_NAME.html">
-                <span class="button-text">Read More</span>
-                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-              </a>
-            </div>
-
-            - To add a project to the this area, copy the above, paste it below this comment, and change the following:
-                - IMAGE_NAME: the name of the image file in assets/images
-                - PROJECT_NAME: the name of the project (keep it short, it only shows 1 line)
-                - SMALL_PROJECT_DESCRIPTION: a quick project description (max 4 lines)
-                - PROJECT_PAGE_NAME.html: the html filename for the project (must be in project-pages folder)
-          -->
-          <div class="project-card">
-            <img src="./assets/images/desktop.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Project Name</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-          <div class="project-card">
-            <img src="./assets/images/code.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Project Name</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-          <div class="project-card">
-            <img src="./assets/images/sketchbook.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Super Long Project Name That Should be Hidden</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-        </div>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./assets/images/1311.png" />
+    <title>My Projects</title>
+    <meta name="description" content="A showcase of my projects.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <style>
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between project cards */
+            padding: 20px; /* Padding around the container */
+        }
+        .project-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden; /* Ensures the image fits the border radius */
+            width: calc(33% - 20px); /* Three cards per row with some gap */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.02); /* Slightly enlarge on hover */
+        }
+        .project-image {
+            width: 100%; /* Full width of the card */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .project-card-text-container {
+            padding: 15px;
+        }
+        .project-title {
+            font-size: 1.5em;
+            margin: 0 0 10px; /* Margin below the title */
+        }
+        .project-description {
+            font-size: 1em;
+            color: #555; /* Dark gray for description */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a class="nav-title-link" href="./index.html">
+            <span class="nav-title">Portfolio</span>
+        </a>
+        <a class="button" href="./about.html">About Me</a>
+        <a class="button" href="./projects.html">Projects</a>
+        <a class="button" href="./contact.html">Contact</a>
     </div>
+
+    <div id="main-content">
+        <h1>My Projects</h1>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <a href="./project-pages/project1.html">
+                    <img src="./assets/images/project1.jpg" class="project-image" alt="Project 1 Image">
+                    <div class="project-card-text-container">
+                        <div class="project-title">Project Title 1</div>
+                        <div class="project-description">This is a short description of Project 1, highlighting key features.</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <a href="./project-pages/project2.html">
+                    <img src="./assets/images/project2.jpg" class="project-image" alt="Project 2 Image">
+                    <div class="project-card-text-container">
+                        <div class="project-title">Project Title 2</div>
+                        <div class="project-description">This is a short description of Project 2, highlighting key features.</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <a href="./project-pages/project3.html">
+                    <img src="./assets/images/project3.jpg" class="project-image" alt="Project 3 Image">
+                    <div class="project-card-text-container">
+                        <div class="project-title">Project Title 3</div>
+                        <div class="project-description">This is a short description of Project 3, highlighting key features.</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </div>
+
+    <div id="footer">
+        <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
+            <img src="./assets/icons/mail.svg" class="footer-icon"/>
+        </a>
+    </div>
+</body>
+</html>
+
