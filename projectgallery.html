@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="./assets/images/1311.png" />
+    <title>My Image Gallery</title>
+    <meta name="description" content="A showcase of my projects.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/utilities.css">
     <style>
         * {
             box-sizing: border-box;
@@ -14,6 +19,39 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-title-link {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .button {
+            text-decoration: none;
+            padding: 10px 15px;
+            color: white;
+            background-color: #007BFF;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
         }
 
         .gallery {
@@ -37,17 +75,57 @@
         .gallery img:hover {
             transform: scale(1.05);
         }
+
+        #footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon-link {
+            text-decoration: none;
+        }
+
+        .footer-icon {
+            width: 30px;
+            height: auto;
+        }
     </style>
 </head>
 <body>
-    <h1>CARTOGRAPHY</h1>
-    <div class="gallery">
-        <a href="BearRiverDEM.html"><img src="BearRiver_med.png"></a>
-        <a href="BearRiverDEM.html"><img src="DeerHabitat.png"></a>
-        <a href="BearRiverDEM.html"><img src="NHConservation.png"></a>
-        <a href="page4.html"><img src="image4.jpg" alt="Description 4"></a>
-        <a href="page5.html"><img src="image5.jpg" alt="Description 5"></a>
-        <a href="page6.html"><img src="image6.jpg" alt="Description 6"></a>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a class="nav-title-link" href="./index.html">
+            <span class="nav-title">Portfolio</span>
+        </a>
+        <a class="button" href="./about.html">About Me</a>
+        <a class="button" href="./projects.html">Projects</a>
+        <a class="button" href="./contact.html">Contact</a>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+        <h1>CARTOGRAPHY</h1>
+        <div class="gallery">
+            <a href="./project-pages/CA Wildfires.html">
+                <img src="./assets/images/CA_Wildfires.png" alt="Analyzing California Wildfires">
+            </a>
+            <a href="./project-pages/BearRiverDEM.html">
+                <img src="./assets/images/BearRiver_xsmall.png" alt="Bear River Project">
+            </a>
+            <a href="./project-pages/BearRiverDEM.html">
+                <img src="./assets/images/NHConservation.png" alt="Project 3 Image">
+            </a>
+            <!-- Add more projects as needed -->
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
+            <img src="./assets/icons/mail.svg" class="footer-icon" alt="Email Icon"/>
+        </a>
     </div>
 </body>
 </html>
