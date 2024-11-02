@@ -1,24 +1,75 @@
-/* Navbar styles */
-.navbar {
-    position: sticky; /* Makes the navbar stick to the top */
-    top: 0; /* Keeps it at the top of the page */
-    width: 100%; /* Full width */
-    background-color: #333; /* Background color (change as needed) */
-    color: white; /* Text color */
-    z-index: 1000; /* Ensures it stays on top of other content */
-    padding: 10px 0; /* Padding for spacing */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./assets/images/1311.png" />
+    <title>Portfolio</title>
+    <meta name="description" content="A portfolio template for the Unemployables community.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <script defer src="./js/script.js"></script>
+    <style>
+        /* Navbar styles */
+        .navbar {
+            position: sticky; /* Makes the navbar stick to the top */
+            top: 0; /* Keeps it at the top of the page */
+            width: 100%; /* Full width */
+            background-color: #333; /* Background color (change as needed) */
+            color: white; /* Text color */
+            z-index: 1000; /* Ensures it stays on top of other content */
+            padding: 10px 0; /* Padding for spacing */
+        }
 
-/* Style for links/buttons in the navbar */
-.navbar a {
-    color: white; /* Text color for links */
-    text-decoration: none; /* No underline */
-    margin: 0 15px; /* Spacing between buttons */
-    padding: 8px 16px; /* Padding for buttons */
-    border-radius: 4px; /* Rounded corners for buttons */
-    transition: background-color 0.3s; /* Smooth background change on hover */
-}
+        /* Style for links/buttons in the navbar */
+        .navbar a {
+            color: white; /* Text color for links */
+            text-decoration: none; /* No underline */
+            margin: 0 15px; /* Spacing between buttons */
+            padding: 8px 16px; /* Padding for buttons */
+            border-radius: 4px; /* Rounded corners for buttons */
+            transition: background-color 0.3s; /* Smooth background change on hover */
+        }
 
-.navbar a:hover {
-    background-color: #555; /* Background color on hover (change as needed) */
-}
+        .navbar a:hover {
+            background-color: #555; /* Background color on hover (change as needed) */
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a class="nav-title-link" href="./index.html">
+            <span class="nav-title">Portfolio</span>
+        </a>
+        <a class="button" href="./about.html">
+            <span class="button-text">About Me</span>
+        </a>
+        <a class="button" href="./projects.html">
+            <span class="button-text">Projects</span>
+        </a>
+        <a class="button" href="./contact.html">
+            <span class="button-text">Contact</span>
+        </a>
+        <a class="button" href="mailto:email@gmail.com">
+            <span class="button-text">Contact Me</span>
+        </a>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+        <!-- Your other content goes here -->
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
+            <img src="./assets/icons/twitter.svg" class="footer-icon"/>
+        </a>
+        <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
+            <img src="./assets/icons/mail.svg" class="footer-icon"/>
+        </a>
+    </div>
+</body>
+</html>
