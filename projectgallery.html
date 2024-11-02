@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./assets/images/1311.png" />
+    <title>Projects</title>
+    <meta name="description" content="A portfolio template for projects.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <script defer src="./js/script.js"></script>
+    <style>
+        /* Styles for the galleries */
+        .gallery-section {
+            margin: 20px 0; /* Space between sections */
+        }
+        .gallery-image-container {
+            display: inline-block; /* Allows images to sit next to each other */
+            margin: 10px; /* Space around each image */
+            text-align: center; /* Center-align captions */
+        }
+        .gallery-image {
+            width: 200px; /* Set a width for all images */
+            height: auto; /* Keep aspect ratio */
+            cursor: pointer; /* Change cursor to pointer for clickable images */
+        }
+        .gallery-title {
+            font-weight: bold; /* Bold titles */
+            margin-top: 5px; /* Space between image and title */
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a class="nav-title-link" href="./index.html">
+            <span class="nav-title">Portfolio</span>
+        </a>
+        <a class="button" href="./about.html">
+            <span class="button-text">About Me</span>
+        </a>
+        <a class="button" href="./projects.html">
+            <span class="button-text">Projects</span>
+        </a>
+        <a class="button" href="./contact.html">
+            <span class="button-text">Contact</span>
+        </a>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+
+      <!-- GALLERY SECTION WITHOUT TITLES (CARTOGRAPHY, MAPS) -->
+        <div class="gallery-section">
+            <h2>CARTOGRAPHY</h2>
+            <div class="gallery-image-container">
+                <a href="./project-pages/BearRiverDEM.html">
+                    <img src="./assets/images/BearRiver_med.jpg" class="gallery-image" alt="Project 3">
+                </a>
+            </div>
+            <div class="gallery-image-container">
+                <a href="./project-pages/BearRiverDEM.html">
+                    <img src="./assets/images/BearRiver_med.jpg" class="gallery-image" alt="Project 4">
+                </a>
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+
+    </div>
+        <!-- GALLERY SECTION WITH TITLES (FOR PYTHON LINKS, BLOG POSTS -->
+        <div class="gallery-section">
+            <h2>Gallery with Titles</h2>
+            <div class="gallery-image-container">
+                <a href="./project-pages/CA Wildfires.html">
+                    <img src="./assets/images/CA_Wildfires.png" class="gallery-image" alt="Project 1">
+                    <div class="gallery-title">California Wildfires</div>
+                </a>
+            </div>
+            <div class="gallery-image-container">
+                <a href="./project-pages/project2.html">
+                    <img src="./assets/images/project2_image.jpg" class="gallery-image" alt="Project 2">
+                    <div class="gallery-title">Project 2 Title</div>
+                </a>
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
+            <img src="./assets/icons/twitter.svg" class="footer-icon"/>
+        </a>
+        <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
+            <img src="./assets/icons/mail.svg" class="footer-icon"/>
+        </a>
+    </div>
+</body>
+</html>
