@@ -45,7 +45,7 @@
             text-decoration: none;
             padding: 10px 15px;
             color: white;
-            background-color: #007BFF;
+            background-color: #FFFFFF; /* white */
             border-radius: 5px;
             transition: background-color 0.3s;
         }
@@ -66,8 +66,9 @@
         }
 
         .gallery img {
-            width: 100%;
-            height: auto;
+            width: 300px; /* Fixed width */
+            height: 200px; /* Fixed height */
+            object-fit: cover; /* Maintains aspect ratio and covers the area */
             border-radius: 8px;
             transition: transform 0.2s;
         }
@@ -106,7 +107,7 @@
 
     <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
-        <h1>CARTOGRAPHY</h1>
+        <h1>My Image Gallery</h1>
         <div class="gallery">
             <a href="./project-pages/CA Wildfires.html">
                 <img src="./assets/images/CA_Wildfires.png" alt="Analyzing California Wildfires">
@@ -114,8 +115,8 @@
             <a href="./project-pages/BearRiverDEM.html">
                 <img src="./assets/images/BearRiver_xsmall.png" alt="Bear River Project">
             </a>
-            <a href="./project-pages/BearRiverDEM.html">
-                <img src="./assets/images/NHConservation.png" alt="Project 3 Image">
+            <a href="./project-pages/project3.html">
+                <img src="./assets/images/project3.jpg" alt="Project 3 Image">
             </a>
             <!-- Add more projects as needed -->
         </div>
