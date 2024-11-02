@@ -1,112 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <link rel="icon" href="./assets/images/1311.png" />
-    <title>Projects</title>
-    <meta name="description" content="A portfolio template for projects.">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/typography.css">
-    <link rel="stylesheet" href="./css/utilities.css">
-    <script defer src="./js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
     <style>
-        .gallery-section {
-            margin: 20px 0; /* Space between sections */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
-        .gallery-container {
-            display: flex; /* Use flexbox to align items next to each other */
-            flex-wrap: wrap; /* Allow items to wrap to the next line if they overflow */
-            justify-content: flex-start; /* Align items to the start */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
         }
 
-        .gallery-image-container {
-            margin: 10px; /* Space around each image */
-            text-align: center; /* Center-align captions, if any */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
         }
 
-        .gallery-image {
-            width: 200px; /* Set a fixed width for all images */
-            height: auto; /* Maintain aspect ratio */
-            cursor: pointer; /* Change cursor to pointer for clickable images */
+        .gallery a {
+            display: block;
         }
 
-        .gallery-title {
-            margin-top: 5px; /* Space between image and title */
-            font-weight: bold; /* Make title bold */
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <a class="nav-title-link" href="./index.html">
-            <span class="nav-title">Portfolio</span>
-        </a>
-        <a class="button" href="./about.html">
-            <span class="button-text">About Me</span>
-        </a>
-        <a class="button" href="./projects.html">
-            <span class="button-text">Projects</span>
-        </a>
-        <a class="button" href="./contact.html">
-            <span class="button-text">Contact</span>
-        </a>
-    </div>
-
-    <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
-        <!-- GALLERY SECTION WITHOUT TITLES (CARTOGRAPHY, MAPS) -->
-        <div class="gallery-section">
-            <h2>CARTOGRAPHY</h2>
-            <div class="gallery-container">
-                <div class="gallery-image-container">
-                    <a href="./project-pages/BearRiverDEM.html">
-                        <img src="./assets/images/BearRiver_med.png" class="gallery-image" alt="Bear River DEM">
-                    </a>
-                </div>
-                <div class="gallery-image-container">
-                    <a href="./project-pages/DeerHabitat.html">
-                        <img src="./assets/images/DeerHabitat.png" class="gallery-image" alt="Deer Habitat">
-                    </a>
-                </div>
-                <div class="gallery-image-container">
-                    <a href="./project-pages/NHConservation.html">
-                        <img src="./assets/images/NHConservation.png" class="gallery-image" alt="NH Conservation">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- GALLERY SECTION WITH TITLES (FOR PYTHON LINKS, BLOG POSTS) -->
-        <div class="gallery-section">
-            <h2>SCRIPTING</h2>
-            <div class="gallery-container">
-                <div class="gallery-image-container">
-                    <a href="./project-pages/CA Wildfires.html">
-                        <img src="./assets/images/CA_Wildfires.png" class="gallery-image" alt="California Wildfires">
-                        <div class="gallery-title">California Wildfires</div>
-                    </a>
-                </div>
-                <div class="gallery-image-container">
-                    <a href="./project-pages/project2.html">
-                        <img src="./assets/images/project2_image.jpg" class="gallery-image" alt="Project 2">
-                        <div class="gallery-title">Project 2 Title</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div id="footer">
-        <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-            <img src="./assets/icons/twitter.svg" class="footer-icon"/>
-        </a>
-        <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
-            <img src="./assets/icons/mail.svg" class="footer-icon"/>
-        </a>
+    <div class="gallery">
+        <a href="BearRiverDEM.html"><img src="BearRiver_med.jpg"></a>
+        <a href="BearRiverDEM.html"><img src="DeerHabitat.jpg"></a>
+        <a href="BearRiverDEM.html"><img src="NHConservation.jpg"></a>
+        <a href="page4.html"><img src="image4.jpg" alt="Description 4"></a>
+        <a href="page5.html"><img src="image5.jpg" alt="Description 5"></a>
+        <a href="page6.html"><img src="image6.jpg" alt="Description 6"></a>
     </div>
 </body>
 </html>
