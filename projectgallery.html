@@ -11,27 +11,32 @@
     <link rel="stylesheet" href="./css/utilities.css">
     <script defer src="./js/script.js"></script>
     <style>
-    .gallery-section {
-        margin: 20px 0; /* Space between sections */
-    }
+        .gallery-section {
+            margin: 20px 0; /* Space between sections */
+        }
 
-    .gallery-container {
-        display: flex; /* Use flexbox to align items next to each other */
-        flex-wrap: wrap; /* Allow items to wrap to the next line if they overflow */
-        justify-content: flex-start; /* Align items to the start */
-    }
+        .gallery-container {
+            display: flex; /* Use flexbox to align items next to each other */
+            flex-wrap: wrap; /* Allow items to wrap to the next line if they overflow */
+            justify-content: flex-start; /* Align items to the start */
+        }
 
-    .gallery-image-container {
-        margin: 10px; /* Space around each image */
-        text-align: center; /* Center-align captions, if any */
-    }
+        .gallery-image-container {
+            margin: 10px; /* Space around each image */
+            text-align: center; /* Center-align captions, if any */
+        }
 
-    .gallery-image {
-        width: 400px; /* Set a fixed width for all images */
-        height: auto; /* Maintain aspect ratio */
-        cursor: pointer; /* Change cursor to pointer for clickable images */
-    }
-</style>
+        .gallery-image {
+            width: 400px; /* Set a fixed width for all images */
+            height: auto; /* Maintain aspect ratio */
+            cursor: pointer; /* Change cursor to pointer for clickable images */
+        }
+
+        .gallery-title {
+            margin-top: 5px; /* Space between image and title */
+            font-weight: bold; /* Make title bold */
+        }
+    </style>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -52,48 +57,47 @@
 
     <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
-
-      <!-- GALLERY SECTION WITHOUT TITLES (CARTOGRAPHY, MAPS) -->
+        <!-- GALLERY SECTION WITHOUT TITLES (CARTOGRAPHY, MAPS) -->
         <div class="gallery-section">
             <h2>CARTOGRAPHY</h2>
-            <div class="gallery-image-container">
-                <a href="./project-pages/BearRiverDEM.html">
-                    <img src="./assets/images/BearRiver_med.png" class="gallery-image">
-                </a>
+            <div class="gallery-container">
+                <div class="gallery-image-container">
+                    <a href="./project-pages/BearRiverDEM.html">
+                        <img src="./assets/images/BearRiver_med.png" class="gallery-image" alt="Bear River DEM">
+                    </a>
+                </div>
+                <div class="gallery-image-container">
+                    <a href="./project-pages/DeerHabitat.html">
+                        <img src="./assets/images/DeerHabitat.png" class="gallery-image" alt="Deer Habitat">
+                    </a>
+                </div>
+                <div class="gallery-image-container">
+                    <a href="./project-pages/NHConservation.html">
+                        <img src="./assets/images/NHConservation.png" class="gallery-image" alt="NH Conservation">
+                    </a>
+                </div>
             </div>
-            <div class="gallery-image-container">
-                <a href="./project-pages/BearRiverDEM.html">
-                    <img src="./assets/images/DeerHabitat.png" class="gallery-image">
-                </a>
-            </div>
-              </div>
-            <div class="gallery-image-container">
-                <a href="./project-pages/BearRiverDEM.html">
-                    <img src="./assets/images/NHConservation.png" class="gallery-image">
-                </a>
-            </div>
-            <!-- Add more images as needed -->
         </div>
 
-    </div>
-        <!-- GALLERY SECTION WITH TITLES (FOR PYTHON LINKS, BLOG POSTS -->
+        <!-- GALLERY SECTION WITH TITLES (FOR PYTHON LINKS, BLOG POSTS) -->
         <div class="gallery-section">
             <h2>SCRIPTING</h2>
-            <div class="gallery-image-container">
-                <a href="./project-pages/CA Wildfires.html">
-                    <img src="./assets/images/CA_Wildfires.png" class="gallery-image" alt="Project 1">
-                    <div class="gallery-title">California Wildfires</div>
-                </a>
+            <div class="gallery-container">
+                <div class="gallery-image-container">
+                    <a href="./project-pages/CA Wildfires.html">
+                        <img src="./assets/images/CA_Wildfires.png" class="gallery-image" alt="California Wildfires">
+                        <div class="gallery-title">California Wildfires</div>
+                    </a>
+                </div>
+                <div class="gallery-image-container">
+                    <a href="./project-pages/project2.html">
+                        <img src="./assets/images/project2_image.jpg" class="gallery-image" alt="Project 2">
+                        <div class="gallery-title">Project 2 Title</div>
+                    </a>
+                </div>
             </div>
-            <div class="gallery-image-container">
-                <a href="./project-pages/project2.html">
-                    <img src="./assets/images/project2_image.jpg" class="gallery-image" alt="Project 2">
-                    <div class="gallery-title">Project 2 Title</div>
-                </a>
-            </div>
-            <!-- Add more images as needed -->
         </div>
-
+    </div>
 
     <!-- FOOTER -->
     <div id="footer">
