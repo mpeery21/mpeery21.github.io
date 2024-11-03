@@ -3,128 +3,44 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="./assets/images/1311.png" />
-    <title>Portfolio</title>
-    <meta name="description" content="A portfolio template for the Unemployables community.">
+    <title>My Portfolio</title>
+    <meta name="description" content="Welcome to my portfolio!">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/typography.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- Add your font here -->
-    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/utilities.css">
-    <script defer src="./js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">  
     <style>
-        /* Reset styles */
-        * {
-            box-sizing: border-box;
+        body, html {
+            height: 100%;
             margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Sulphur Point, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        h1 {
-            font-family: 'Open Sans', sans-serif;
-            text-align: center;
-            margin: 20px 0;
-            color: #333;
-        }
-
-        /* Navbar styles */
-        .navbar {
+            font-family: 'Sulphur Point', sans-serif;
+            color: white; /* Text color */
+            text-align: center; /* Center text */
             display: flex;
-            justify-content: space-around;
-            background-color: #fff;
-            padding: 10px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            align-items: center; /* Vertically center */
+            justify-content: center; /* Horizontally center */
+            background-image: url('./path/to/your/image.jpg'); /* Replace with your image path */
+            background-size: cover; /* Cover the whole page */
+            background-position: center; /* Center the image */
         }
-
-        .nav-title-link {
-            text-decoration: none;
-            font-size: 1.5em;
-            color: #333;
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            padding: 20px; /* Padding for text */
+            border-radius: 10px; /* Optional: rounded corners */
         }
-
-        .button {
-            text-decoration: none;
-            padding: 10px 15px;
-            color: white;
-            background-color: #FFFFFF; /* Updated button color */
-            border-radius: 5px;
-            transition: background-color 0.3s;
+        h1 {
+            font-size: 3em; /* Adjust size as needed */
+            margin: 0; /* Remove default margin */
         }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Portfolio header styles */
-        #portfolio-header {
-            margin: 0; /* Set margin to zero */
-            padding: 5px 0; /* Adjust as needed */
-        }
-
-        /* Header image responsiveness */
-        .portfolio-header-image {
-            max-width: 100%; /* Responsive image */
-            height: auto; /* Maintain aspect ratio */
-        }
-
-        /* Footer styles */
-        #footer {
-            text-align: center;
-            padding: 20px 0; /* Vertical padding */
-            background-color: #f8f8f8; /* Light footer background */
-        }
-        .footer-icon {
-            width: 30px; /* Adjust size of footer icons */
-            height: auto; /* Maintain aspect ratio */
-            margin: 0 10px; /* Spacing between icons */
+        p {
+            font-size: 1.5em; /* Adjust size as needed */
+            margin: 10px 0 0; /* Add margin for spacing */
         }
     </style>
 </head>
 <body>
-
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <a class="nav-title-link" href="./index.html">
-            <span class="nav-title">Portfolio</span>
-        </a>
-        <a class="button" href="./about.html">About Me</a>
-        <a class="button" href="./resume.html">Resume</a>
-        <a class="button" href="./projects.html">Projects</a>
-        <a class="button" href="./scripts.html">Scripting/Data Viz</a>
-        <a class="button" href="./contact.html">Contact</a>
-    </div>
-
-    <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
-        <div id="portfolio-header">
-            <div id="portfolio-header-image-container">
-                <img src="./assets/images/1311.png" class="portfolio-header-image" alt="Portfolio Header Image">
-                <a class="no-underline" target="_blank" href="https://opensea.io/assets/0xe0be388ab81c47b0f098d2030a1c9ef190691a8a/1311">
-                    <span class="image-caption"></span>
-                </a>
-            </div>
-            <div id="portfolio-header-text-container">
-                <div class="header-text">
-                    <span class="main-title">Hey, I'm Madeline.</span>
-                    <div class="body-text">I’m a GIS Analyst and Environmental Scientist based out of Seattle, WA.</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div id="footer">
-        <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-            <img src="./assets/icons/twitter.svg" class="footer-icon" alt="Twitter Icon"/>
-        </a>
-        <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
-            <img src="./assets/icons/mail.svg" class="footer-icon" alt="Email Icon"/>
-        </a>
+    <div class="overlay">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Your tagline or a brief introduction goes here.</p>
     </div>
 </body>
 </html>
