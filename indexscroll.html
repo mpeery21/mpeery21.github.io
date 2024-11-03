@@ -15,9 +15,16 @@
             font-family: 'Sulphur Point', sans-serif;
             color: black; /* Text color */
             text-align: center; /* Center text */
+            background-color: #fff; /* Set a default background color */
+        }
+        .index-section {
+            height: 100vh; /* Full viewport height for the index section */
             background-image: url('./assets/images/mountains.jpg'); /* Background image */
-            background-size: cover; /* Cover the whole page */
+            background-size: cover; /* Cover the section */
             background-position: center; /* Center the image */
+            display: flex;
+            align-items: center; /* Vertically center */
+            justify-content: center; /* Horizontally center */
         }
         .overlay {
             background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */            
@@ -47,21 +54,27 @@
             text-decoration: none;
             font-size: 1.5em;
             color: #333; /* Dark text color */
+            transition: all 0.3s ease; /* Smooth transition */
         }
         .button {
             padding: 5px 10px; /* Button padding */
             background-color: transparent; /* No background */
             border: none; /* No border */
         }
+        /* Active and Hover States */
+        .button.active, .button:hover {
+            font-weight: bold; /* Bold text */
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow */
+        }
         /* Main sections */
         .section {
             padding: 60px 20px; /* Space for sections */
-            min-height: 20vh; /* Full viewport height */
+            min-height: 20vh; /* Set minimum height for sections */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: #fff;
+            background-color: #fff; /* White background for other sections */
             border-top: 1px solid #ddd; /* Optional: Visual separation */
         }
         .section h2 {
@@ -120,11 +133,13 @@
         <a class="button" href="#contact">Contact</a>
     </div>
 
-    <!-- INDEX OVERLAY -->
-    <div class="overlay">
-        <h1>MADELINE PEERY</h1>
-        <p>GIS PORTFOLIO</p>
-    </div>
+    <!-- INDEX SECTION -->
+    <section id="index" class="index-section">
+        <div class="overlay">
+            <h1>MADELINE PEERY</h1>
+            <p>GIS PORTFOLIO</p>
+        </div>
+    </section>
 
     <!-- ABOUT ME SECTION -->
     <section id="about" class="section">
@@ -218,4 +233,30 @@
         <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
             <img src="./assets/icons/twitter.svg" class="footer-icon" alt="Twitter"/>
         </a>
-        <a class="icon-link" href="mailto:whitevans
+        <a class="icon-link" href="mailto:whitevans">
+            Email Me
+        </a>
+    </footer>
+
+    <script>
+        // Function to add the active class to the navbar buttons based on the scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.navbar .button');
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    const activeLink = document.querySelector(`.navbar .button[href="#${section.id}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
