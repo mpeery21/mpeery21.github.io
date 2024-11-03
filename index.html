@@ -35,9 +35,38 @@
             font-size: 1.5em; /* Adjust size as needed */
             margin: 10px 0 0; /* Add margin for spacing */
         }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .nav-title-link {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .button {
+            text-decoration: none;
+            padding: 5px 10px;
+            color: #333; /* Dark text color */
+            background-color: transparent; /* No background */
+            border: none; /* No border */
+        }
     </style>
 </head>
 <body>
+     <!-- NAVBAR -->
+    <div class="navbar">
+        <a class="nav-title-link" href="./index.html">Portfolio</a>
+        <a class="button" href="./about.html">About Me</a>
+        <a class="button" href="./resume.html">Resume</a>
+        <a class="button" href="./projects.html">Projects</a>
+        <a class="button" href="./scripts.html">Scripting/Data Viz</a>
+        <a class="button" href="./contact.html">Contact</a>
+    </div>
+    
     <div class="overlay">
         <h1>MADELINE PEERY</h1>
         <p>GIS PORTFOLIO.</p>
