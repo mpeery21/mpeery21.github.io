@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./assets/images/1311.png" />
+    <title>My Portfolio</title>
+    <meta name="description" content="Welcome to my portfolio!">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">  
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Sulphur Point', sans-serif;
+            color: white; /* Text color */
+            text-align: center; /* Center text */
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+            padding: 10px 0;
+            position: fixed; /* Fix navbar at the top */
+            width: 100%;
+            z-index: 10; /* Ensure it appears above other content */
+        }
+        .nav-title-link, .button {
+            text-decoration: none;
+            color: #333; /* Dark text color */
+            padding: 10px;
+        }
+        section {
+            height: 100vh; /* Full height for each section */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Background for sections */
+            position: relative; /* Allow for content positioning */
+        }
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
+            padding: 20px; /* Padding for text */
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a class="nav-title-link" href="#section1">Section 1</a>
+        <a class="button" href="#section2">Section 2</a>
+        <a class="button" href="#section3">Section 3</a>
+        <a class="button" href="#section4">Section 4</a>
+    </div>
+
+    <!-- SECTIONS -->
+    <section id="section1">
+        <div class="overlay">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Your tagline or brief introduction goes here.</p>
+        </div>
+    </section>
+    <section id="section2">
+        <div class="overlay">
+            <h1>About Me</h1>
+            <p>Information about yourself.</p>
+        </div>
+    </section>
+    <section id="section3">
+        <div class="overlay">
+            <h1>Projects</h1>
+            <p>Details about your projects.</p>
+        </div>
+    </section>
+    <section id="section4">
+        <div class="overlay">
+            <h1>Contact</h1>
+            <p>How to get in touch.</p>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling behavior for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
