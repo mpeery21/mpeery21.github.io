@@ -18,7 +18,7 @@
             display: flex;
             align-items: center; /* Vertically center */
             justify-content: center; /* Horizontally center */
-            background-image: url('.assets/images/mountains.jpg'); /* Replace with your image path */
+            background-image: url('./assets/images/mountains.jpg'); /* Corrected the image path */
             background-size: cover; /* Cover the whole page */
             background-position: center; /* Center the image */
         }
@@ -38,9 +38,13 @@
         .navbar {
             display: flex;
             justify-content: space-around;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
             padding: 10px 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: absolute; /* Position it at the top */
+            width: 100%; /* Make the navbar full width */
+            top: 0; /* Align to the top */
+            z-index: 10; /* Ensure it appears above the overlay */
         }
         .nav-title-link {
             text-decoration: none;
@@ -57,7 +61,7 @@
     </style>
 </head>
 <body>
-     <!-- NAVBAR -->
+    <!-- NAVBAR -->
     <div class="navbar">
         <a class="nav-title-link" href="./index.html">Portfolio</a>
         <a class="button" href="./about.html">About Me</a>
