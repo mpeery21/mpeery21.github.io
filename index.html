@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="./css/utilities.css">
     <script defer src="./js/script.js"></script>
     <style>
-        /* Navbar styles */
-        <style>
+        /* Reset styles */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -30,6 +29,7 @@
             color: #333;
         }
 
+        /* Navbar styles */
         .navbar {
             display: flex;
             justify-content: space-around;
@@ -48,7 +48,7 @@
             text-decoration: none;
             padding: 10px 15px;
             color: white;
-            background-color: #FFFFFF;
+            background-color: #007BFF; /* Updated button color */
             border-radius: 5px;
             transition: background-color 0.3s;
         }
@@ -56,40 +56,50 @@
         .button:hover {
             background-color: #0056b3;
         }
-    <style>
+
+        /* Portfolio header styles */
+        #portfolio-header {
+            margin: 0; /* Set margin to zero */
+            padding: 20px 0; /* Adjust as needed */
+        }
+
+        /* Header image responsiveness */
+        .portfolio-header-image {
+            max-width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Footer styles */
+        #footer {
+            text-align: center;
+            padding: 20px 0; /* Vertical padding */
+            background-color: #f8f8f8; /* Light footer background */
+        }
+        .footer-icon {
+            width: 30px; /* Adjust size of footer icons */
+            height: auto; /* Maintain aspect ratio */
+            margin: 0 10px; /* Spacing between icons */
+        }
+    </style>
 </head>
 <body>
 
-
-
-
-
-
-        
     <!-- NAVBAR -->
     <div class="navbar">
         <a class="nav-title-link" href="./index.html">
             <span class="nav-title">Portfolio</span>
         </a>
-        <a class="button" href="./about.html">
-            <span class="button-text">About Me</span>
-        </a>
-        <a class="button" href="./projectgallery.html">
-            <span class="button-text">Projects</span>
-        </a>
-        <a class="button" href="./scriptgallery.html">
-            <span class="button-text">Scripting/Data Viz</span>
-        </a>
-        <a class="button" href="./contact.html">
-            <span class="button-text">Contact</span>
-        </a>
+        <a class="button" href="./about.html">About Me</a>
+        <a class="button" href="./projectgallery.html">Projects</a>
+        <a class="button" href="./scriptgallery.html">Scripting/Data Viz</a>
+        <a class="button" href="./contact.html">Contact</a>
     </div>
 
     <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
         <div id="portfolio-header">
             <div id="portfolio-header-image-container">
-                <img src="./assets/images/1311.png" class="portfolio-header-image">
+                <img src="./assets/images/1311.png" class="portfolio-header-image" alt="Portfolio Header Image">
                 <a class="no-underline" target="_blank" href="https://opensea.io/assets/0xe0be388ab81c47b0f098d2030a1c9ef190691a8a/1311">
                     <span class="image-caption"></span>
                 </a>
@@ -101,14 +111,15 @@
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- FOOTER -->
     <div id="footer">
         <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-            <img src="./assets/icons/twitter.svg" class="footer-icon"/>
+            <img src="./assets/icons/twitter.svg" class="footer-icon" alt="Twitter Icon"/>
         </a>
         <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
-            <img src="./assets/icons/mail.svg" class="footer-icon"/>
+            <img src="./assets/icons/mail.svg" class="footer-icon" alt="Email Icon"/>
         </a>
     </div>
 </body>
