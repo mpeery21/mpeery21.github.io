@@ -8,29 +8,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/typography.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- Add your font here -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="./css/utilities.css">
     <script defer src="./js/script.js"></script>
     <style>
         body {
-            font-family: Sulphur Point, sans-serif;
+            font-family: 'Sulphur Point', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9; /* Light background for contrast */
         }
-        #main-content {
-            padding: 5px;
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .nav-title-link {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .button {
+            text-decoration: none;
+            padding: 5px 10px;
+            color: #333; /* Dark text color */
+            background-color: transparent; /* No background */
+            border: none; /* No border */
+        }
+        header {
+            text-align: center;
+            margin: 20px 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #333;
         }
         .section {
-            margin-bottom: 0px;
+            margin: 20px;
+            padding: 10px;
+            background-color: #fff; /* White background for sections */
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
         .section h2 {
             font-family: 'Open Sans', sans-serif;
             font-size: 24px;
             color: #333;
         }
-        .section p {
+        .section p, .section table {
             font-family: 'Open Sans', sans-serif;
             font-size: 18px;
             color: #555;
@@ -40,80 +69,56 @@
 <body>
     <!-- NAVBAR -->
     <div class="navbar">
-        <a class="nav-title-link" href="./index.html">
-            <span class="nav-title">Portfolio</span>
-        </a>
-        <a class="button" href="./about.html">
-            <span class="button-text">About Me</span>
-        </a>
-        <a class="button" href="./projects.html">
-            <span class="button-text">Projects</span>
-        </a>
-        <a class="button" href="./scripts.html">
-            <span class="button-text">Scripting/Data Viz</span>
-        </a>
-        <a class="button" href="./contact.html">
-            <span class="button-text">Contact</span>
-        </a>
+        <a class="nav-title-link" href="./index.html">Portfolio</a>
+        <a class="button" href="./about.html">About Me</a>
+        <a class="button" href="./projects.html">Projects</a>
+        <a class="button" href="./scripts.html">Scripting/Data Viz</a>
+        <a class="button" href="./contact.html">Contact</a>
     </div>
 
     <!-- MAIN CONTENT -->
-   </head>
-<body>
     <header>
         <h1>About Me</h1>
     </header>
     
     <main>
-        <p>
-            Hello! My name is [Your Name], and I am a [Your Profession/Interest]. 
-            I have a passion for [Your Passion or Hobby], and I enjoy [What You Enjoy Doing]. 
-            This website showcases some of my work and projects. Thank you for visiting!
-        </p>
-    </main>
-</body>
-</html>
-    <div class="section">
-    <h2>Skills</h2>
-    <table>
-        <thead>
-        </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>ArcGIS Pro</td>
-            </tr>
-            <tr>
-                <td>QGIS</td>
-            </tr>
-            <tr>
-                <td>SQL</td>
-            </tr>
-            <tr>
-                <td>Python</td>
-            </tr>
-            <tr>
-                <td>MS Access</td>
-            </tr>
-            <tr>
-                <td>Surfer</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-    <div class="section">
-        <h2>Hobbies</h2>
-        </div>In my free time I enjoy running, reading, hiking, kayaking, and exploring the Pacific Northwest.</div>
-    </div>
+        <div class="section">
+            <p>
+                Hello! My name is [Your Name], and I am a [Your Profession/Interest]. 
+                I have a passion for [Your Passion or Hobby], and I enjoy [What You Enjoy Doing]. 
+                This website showcases some of my work and projects. Thank you for visiting!
+            </p>
+        </div>
 
-    <!-- FOOTER -->
-    <div id="footer">
-        <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-            <img src="./assets/icons/twitter.svg" class="footer-icon"/>
-        </a>
-        <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
-            <img src="./assets/icons/mail.svg" class="footer-icon"/>
-        </a>
-    </div>
-</body>
-</html>
+        <div class="section">
+            <h2>Skills</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>ArcGIS Pro</td>
+                    </tr>
+                    <tr>
+                        <td>QGIS</td>
+                    </tr>
+                    <tr>
+                        <td>SQL</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                    </tr>
+                    <tr>
+                        <td>MS Access</td>
+                    </tr>
+                    <tr>
+                        <td>Surfer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Hobbies</h2>
+            <p>In my free time, I enjoy running, reading, hiking, kayaking, and exploring the Pacific Northwest.</p>
+        </div>
+    </main>
+
