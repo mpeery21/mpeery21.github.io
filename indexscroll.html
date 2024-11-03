@@ -3,50 +3,60 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="./assets/images/1311.png" />
-    <title>PORTFOLIO </title>
-    <meta name="description" content="Welcome to my portfolio! Learn more about me, my projects, and my skills.">
+    <title>My Portfolio</title>
+    <meta name="description" content="Welcome to my portfolio!">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">  
     <style>
-        body {
-            font-family: 'Sulphur Point', sans-serif;
+        body, html {
+            height: 100%;
             margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            font-family: 'Sulphur Point', sans-serif;
+            color: black; /* Text color */
+            text-align: center; /* Center text */
+            background-image: url('./assets/images/mountains.jpg'); /* Background image */
+            background-size: cover; /* Cover the whole page */
+            background-position: center; /* Center the image */
+        }
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */            
+            padding: 20px; /* Padding for text */
+            border-radius: 10px; /* Rounded corners */
+        }
+        h1 {
+            font-size: 7em; /* Adjust size as needed */
+            margin: 0; /* Remove default margin */
+        }
+        p {
+            font-size: 4em; /* Adjust size as needed */
+            margin: 10px 0 0; /* Add margin for spacing */
         }
         .navbar {
             display: flex;
             justify-content: space-around;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
             padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 10;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Fixed position at the top */
+            width: 100%; /* Full width */
+            top: 0; /* Align to the top */
+            z-index: 10; /* Ensure it appears above the overlay */
         }
-        .nav-title-link {
+        .nav-title-link, .button {
             text-decoration: none;
             font-size: 1.5em;
+            color: #333; /* Dark text color */
         }
         .button {
-            text-decoration: none;
-            padding: 5px 10px;
+            padding: 5px 10px; /* Button padding */
+            background-color: transparent; /* No background */
+            border: none; /* No border */
         }
-        header {
-            margin-top: 70px; /* Space for fixed navbar */
-            text-align: center;
-        }
-        h1 {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
+        /* Main sections */
         .section {
-            padding: 40px 20px; /* Increased padding for more space */
-            min-height: 20vh; /* Ensure each section fills the viewport */
+            padding: 60px 20px; /* Space for sections */
+            min-height: 100vh; /* Full viewport height */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -102,13 +112,18 @@
 <body>
     <!-- NAVBAR -->
     <div class="navbar">
-        <a class="nav-title-lin" href="#index">Portfolio</a>
         <a class="button" href="#index">Home</a>
         <a class="button" href="#about">About Me</a>
         <a class="button" href="#resume">Resume</a>
         <a class="button" href="#projects">Projects</a>
         <a class="button" href="#scripting">Scripting/Data Viz</a>
         <a class="button" href="#contact">Contact</a>
+    </div>
+
+    <!-- INDEX OVERLAY -->
+    <div class="overlay">
+        <h1>MADELINE PEERY</h1>
+        <p>GIS PORTFOLIO</p>
     </div>
 
     <!-- ABOUT ME SECTION -->
@@ -203,21 +218,4 @@
         <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
             <img src="./assets/icons/twitter.svg" class="footer-icon" alt="Twitter"/>
         </a>
-        <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
-            <img src="./assets/icons/mail.svg" class="footer-icon" alt="Email"/>
-        </a>
-    </footer>
-
-    <script>
-        // Smooth scrolling behavior for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+        <a class="icon-link" href="mailto:whitevans
