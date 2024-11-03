@@ -1,100 +1,119 @@
+
+
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <link rel="icon" href="./assets/images/1311.png" />
-    <title>New Hampshire Conservation Lands</title>
+	<head>
+		<meta charset="utf-8">
+    <!-- 
+      TODO
+
+      Upload your Unemployable (or whatever photo you like) to the assets/images folder
+      and change the name of the image below to match the uploaded one
+
+      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+
+      This should be the same across all pages.
+     -->
+     <link rel="icon" href="../assets/images/NHConservation.png" />
+     <title>New Hampshire Conservation Lands</title>
     <meta name="description" content="NH Conservation Lands.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/typography.css">
-    <link rel="stylesheet" href="./css/utilities.css">
-    <script defer src="./js/script.js"></script>
-    <style>
-        /* Styles for the galleries */
-        .gallery-section {
-            margin: 20px 0; /* Space between sections */
-        }
-        .gallery-image-container {
-            display: inline-block; /* Allows images to sit next to each other */
-            margin: 10px; /* Space around each image */
-            text-align: center; /* Center-align captions */
-        }
-        .gallery-image {
-            width: 200px; /* Set a width for all images */
-            height: auto; /* Keep aspect ratio */
-            cursor: pointer; /* Change cursor to pointer for clickable images */
-        }
-        .gallery-title {
-            font-weight: bold; /* Bold titles */
-            margin-top: 5px; /* Space between image and title */
-        }
-    </style>
-</head>
-<body>
+
+		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
     <!-- NAVBAR -->
     <div class="navbar">
-        <a class="nav-title-link" href="./index.html">
-            <span class="nav-title">Portfolio</span>
+      <a class="nav-title-link" href="../index.html">
+        <!-- 
+          TODO - Change the "Portfolio Title" to whatever you want displayed in the top left
+
+          (this should be the same across all pages)
+         -->
+        <span class="nav-title">Portfolio</span>
+        <!-- 
+          TODO - Change the email after 'mailto:' to your email address for contact 
+        
+          (this should be the same across all pages)
+        -->
+        <a class="button" href="mailto:whitevans.eth@gmail.com">
+          <span class="button-text">Contact Me</span>
         </a>
-        <a class="button" href="./about.html">
-            <span class="button-text">About Me</span>
-        </a>
-        <a class="button" href="./projects.html">
-            <span class="button-text">Projects</span>
-        </a>
-        <a class="button" href="./contact.html">
-            <span class="button-text">Contact</span>
-        </a>
+      </a>
     </div>
 
     <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
 
-      <!-- GALLERY SECTION WITHOUT TITLES (CARTOGRAPHY, MAPS) -->
-        <div class="gallery-section">
-            <h2>CARTOGRAPHY</h2>
-            <div class="gallery-image-container">
-                <a href="./project-pages/BearRiverDEM.html">
-                    <img src="./assets/images/BearRiver_med.jpg" class="gallery-image" alt="Project 3">
-                </a>
-            </div>
-            <div class="gallery-image-container">
-                <a href="./project-pages/BearRiverDEM.html">
-                    <img src="./assets/images/BearRiver_med.jpg" class="gallery-image" alt="Project 4">
-                </a>
-            </div>
-            <!-- Add more images as needed -->
-        </div>
+      <!-- PROJECT HEADER -->
+      <div id="project-header">
+          <!-- 
+            TODO
 
-    </div>
-        <!-- GALLERY SECTION WITH TITLES (FOR PYTHON LINKS, BLOG POSTS -->
-        <div class="gallery-section">
-            <h2>Gallery with Titles</h2>
-            <div class="gallery-image-container">
-                <a href="./project-pages/project1.html">
-                    <img src="./assets/images/project1_image.jpg" class="gallery-image" alt="Project 1">
-                    <div class="gallery-title">Project 1 Title</div>
-                </a>
-            </div>
-            <div class="gallery-image-container">
-                <a href="./project-pages/project2.html">
-                    <img src="./assets/images/project2_image.jpg" class="gallery-image" alt="Project 2">
-                    <div class="gallery-title">Project 2 Title</div>
-                </a>
-            </div>
-            <!-- Add more images as needed -->
-        </div>
+            - Change the 'main-title' text to the name of your project
+            - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
+            - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
+          -->
+        <div class="main-title">New Hampshire Conservation Lands</div>
+        <div class="body-text">A summary of my summer fellowship with The Nature Conservancy for summer 2021.</div>
+        <image class="project-header-image" src="../assets/images/NHConservation.png">
+      </div>
 
+      <!-- PROJECT DETAILS -->
+      <!-- 
+        TODO
+
+        - Change the 'subheader-text' to whatever header you want for project details
+        - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
+      -->
+      <div id="project-details">
+        <div class="subheader-text">Project Details</div>
+        <div class="project-details-content">
+          <div class="body-text">I'm grateful to have been a part of the University of New Hampshire's Sustainability Fellows summer program, in which I worked with The Nature Conservancy of New Hampshire as their GIS fellow. This project consisted of working with the state of New Hampshire's data repository, GRANIT, in updating the public and conservations lands dataset.</div>
+        </div>
+      </div>
 
     <!-- FOOTER -->
     <div id="footer">
-        <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-            <img src="./assets/icons/twitter.svg" class="footer-icon"/>
-        </a>
-        <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
-            <img src="./assets/icons/mail.svg" class="footer-icon"/>
-        </a>
+      <!-- 
+        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
+
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
+        <image src="../assets/icons/instagram.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
+        <image src="../assets/icons/twitter.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change the email after "mailto" to your contact email 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
+        <image src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
     </div>
-</body>
+
+	</body>
 </html>
