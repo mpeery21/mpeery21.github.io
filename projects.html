@@ -1,104 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <link rel="icon" href="./assets/images/1311.png" />
-    <title>My Projects</title>
-    <meta name="description" content="A showcase of my projects.">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/typography.css">
-    <link rel="stylesheet" href="./css/utilities.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartography Gallery</title>
     <style>
-        /* Project container styles */
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px; /* Space between project cards */
-            padding: 20px; /* Padding around the container */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
         }
-        .project-card {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            overflow: hidden; /* Ensures the image fits the border radius */
-            width: calc(40% - 20px); /* Adjusted for larger cards */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 400px);
+            gap: 20px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            cursor: pointer;
             transition: transform 0.3s;
         }
-        .project-card:hover {
-            transform: scale(1.02); /* Slightly enlarge on hover */
-        }
-        .project-image {
-            width: 100%; /* Full width of the card */
-            height: auto; /* Maintain aspect ratio */
-        }
-        .project-card-text-container {
-            padding: 15px;
-        }
-        .project-title {
-            font-size: 1.5em; /* Increase font size if needed */
-            margin: 0 0 10px; /* Margin below the title */
-            font-weight: bold; /* Makes the title bold */
-            word-wrap: break-word; /* Ensures long titles wrap to the next line */
-        }
-        .project-description {
-            font-size: 1em;
-            font-weight: regular;
-            color: #555; /* Dark gray for description */
+        .gallery img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <a class="nav-title-link" href="./index.html">
-            <span class="nav-title">Portfolio</span>
-        </a>
-        <a class="button" href="./about.html">About Me</a>
-        <a class="button" href="./projects.html">Projects</a>
-        <a class="button" href="./contact.html">Contact</a>
-    </div>
-
-    <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
-        <h1>My Projects</h1>
-        <div class="projects-container">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <a href="./project-pages/CA Wildfires.html">
-                    <img src="./assets/images/CA_Wildfires.png" class="project-image" alt="Python Project">
-                    <div class="project-card-text-container">
-                        <div class="project-title">Analyzing California Wildfires</div>
-                        <div class="project-description">Analyzing wildfire trends in California from 2000 to 2023.</div>
-                    </div>
-                </a>
-            </div>
-            <!-- Project 2 -->
-            <div class="project-card">
-                <a href="./project-pages/BearRiverDEM.html">
-                    <img src="./assets/images/BearRiver_xsmall.png" class="project-image">
-                    </div>
-                </a>
-            </div>
-            <!-- Project 3 -->
-            <div class="project-card">
-                <a href="./project-pages/project3.html">
-                    <img src="./assets/images/project3.jpg" class="project-image" alt="Project 3 Image">
-                    <div class="project-card-text-container">
-                        <div class="project-title">Project Title 3</div>
-                        <div class="project-description">This is a short description of Project 3, highlighting key features.</div>
-                    </div>
-                </a>
-            </div>
-            <!-- Add more projects as needed -->
-        </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div id="footer">
-        <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
-            <img src="./assets/icons/mail.svg" class="footer-icon"/>
-        </a>
+    <header>
+        <h1>Cartography</h1>
+        <p>Click on images to see more</p>
+    </header>
+    
+    <div class="gallery">
+        <a href="link-to-image1.html"><img src="image1.jpg" alt="Map 1"></a>
+        <a href="link-to-image2.html"><img src="image2.jpg" alt="Map 2"></a>
+        <a href="link-to-image3.html"><img src="image3.jpg" alt="Map 3"></a>
+        <a href="link-to-image4.html"><img src="image4.jpg" alt="Map 4"></a>
+        <a href="link-to-image5.html"><img src="image5.jpg" alt="Map 5"></a>
+        <a href="link-to-image6.html"><img src="image6.jpg" alt="Map 6"></a>
     </div>
 </body>
 </html>
