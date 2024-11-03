@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./assets/images/1311.png" />
+    <meta name="description" content="A showcase of my projects.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- Add your font here -->
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="./css/utilities.css">
+    <style>
+        body {
+            font-family: Sulphur Point, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            font-family: 'Open Sans', sans-serif; /* Change 'YourDesiredFont' to your preferred font */
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        header {
+            margin-top: 70px; /* Adjust this value to create space */
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 400px);
+            gap: 20px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        .navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent; /* Remove background color */
+    padding: 10px 0;
+    box-shadow: none; /* Remove shadow */
+}
+
+.nav-title-link {
+    text-decoration: none; /* No underline on links */
+    font-size: 1.5em; /* Font size for the title link */
+    color: #333; /* Color of the title link */
+}
+
+.button {
+    text-decoration: none; /* No underline on buttons */
+    padding: 5px 10px; /* Adjusted padding for buttons */
+    color: #333; /* Text color for buttons, matching the title link */
+    background-color: transparent; /* No background color */
+    border: none; /* No border */
+}
+
+.button:hover {
+    /* Optional: Change text color on hover for visibility */
+    color: #0056b3; /* Change color on hover, if desired */
+}
+
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a class="nav-title-link" href="./index.html">
+            <span class="nav-title">Portfolio</span>
+        </a>
+        <a class="button" href="./about.html">About Me</a>
+        <a class="button" href="./projects.html">Projects</a>
+        <a class="button" href="./scripts.html">Scripting/Data Viz</a>
+        <a class="button" href="./contact.html">Contact</a>
+    </div>
+    
+    <header>
+        <h1>SCRIPTS</h1>
+        <p>Click on images to see more</p>
+    </header>
+    
+    <div class="gallery">
+        <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/CA_Wildfires.png"></a>
+        <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/OspreyMigration.png"></a>
+        <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/BearRiver_med.png"></a>
+        <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/NHConservation.png"></a>
+        <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/DeerHabitat.png"></a>
+        <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/OspreyMigration.png"></a>
+    </div>
+</body>
+</html>
+
