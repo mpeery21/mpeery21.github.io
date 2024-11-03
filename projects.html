@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartography Gallery</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="./assets/images/1311.png" />
+    <meta name="description" content="A showcase of my projects.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/utilities.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,10 +38,33 @@
         .gallery img:hover {
             transform: scale(1.05);
         }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .nav-title-link {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .button {
+            text-decoration: none;
+            padding: 5px 10px; /* Adjusted padding */
+            color: white;
+            background-color: #007BFF; /* Updated button color */
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
-    
-     <!-- NAVBAR -->
+<body>
+    <!-- NAVBAR -->
     <div class="navbar">
         <a class="nav-title-link" href="./index.html">
             <span class="nav-title">Portfolio</span>
@@ -48,19 +75,19 @@
         <a class="button" href="./contact.html">Contact</a>
     </div>
     
-<body>
     <header>
         <h1>Cartography</h1>
         <p>Click on images to see more</p>
     </header>
     
     <div class="gallery">
-        <a href="link-to-image1.html"><img src="DeerHabitat.png" alt="Map 1"></a>
-        <a href="link-to-image2.html"><img src="OspreyMigration.png" alt="Map 2"></a>
-        <a href="link-to-image3.html"><img src="BearRiver_med.png" alt="Map 3"></a>
-        <a href="link-to-image4.html"><img src="NHConservation.png" alt="Map 4"></a>
+        <a href="BearRiverDEM.html"><img src="DeerHabitat.png"></a>
+        <a href="BearRiverDEM.html"><img src="OspreyMigration.png"></a>
+        <a href="link-to-image3.html"><img src="BearRiver_med.png"></a>
+        <a href="NHConservation.html"><img src="NHConservation.png""></a>
         <a href="link-to-image5.html"><img src="image5.jpg" alt="Map 5"></a>
         <a href="link-to-image6.html"><img src="image6.jpg" alt="Map 6"></a>
     </div>
 </body>
 </html>
+
