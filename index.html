@@ -12,35 +12,60 @@
     <script defer src="./js/script.js"></script>
     <style>
         /* Navbar styles */
+        <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
         .navbar {
-            position: sticky;
-            top: 0;
-            width: 100%;
-            background-color: white;
-            color: black;
-            z-index: 1000;
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
             padding: 10px 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .navbar a {
-            color: black;
+
+        .nav-title-link {
             text-decoration: none;
-            margin: 0 5px;
-            padding: 5px 0;
-            border-radius: 4px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .button {
+            text-decoration: none;
+            padding: 10px 15px;
+            color: white;
+            background-color: #FFFFFF;
+            border-radius: 5px;
             transition: background-color 0.3s;
         }
-        .navbar a:hover {
-            background-color: #f0f0f0;
+
+        .button:hover {
+            background-color: #0056b3;
         }
-        /* Portfolio header styles */
-    #portfolio-header {
-        margin: 0; /* Sets margin to zero */
-        padding: 20px 0; /* Adjust padding as needed */
-    }
-    </style>
+    <style>
 </head>
 <body>
+
+
+
+
+
+
+        
     <!-- NAVBAR -->
     <div class="navbar">
         <a class="nav-title-link" href="./index.html">
