@@ -16,8 +16,8 @@
         body {
             font-family: 'Sulphur Point', sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 20px; /* Add padding around the entire body */
+            margin: 20px;
+            padding: 0;
             background-color: #f9f9f9; /* Light background for contrast */
         }
         .navbar {
@@ -47,11 +47,36 @@
             font-size: 2.5em;
             color: #333;
         }
-        p {
+        .section {
+            margin: 20px 0; /* Less margin to eliminate block feel */
+            padding: 0; /* Remove padding */
+        }
+        .section h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 24px;
+            color: #333;
+        }
+        .section p,
+        .section table {
             font-family: 'Open Sans', sans-serif;
             font-size: 18px;
             color: #555;
-            text-align: center; /* Center the text */
+            margin: 0; /* Remove margin from paragraphs */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto; /* Center the table */
+        }
+        td {
+            padding: 20px; /* Space between icons */
+            text-align: center;
+        }
+        td img {
+            width: 40px; /* Set icon size */
+            height: 40px; /* Set icon size */
+            display: block; /* Ensures the image behaves as a block element */
+            margin: 0 auto; /* Centers the image */
         }
     </style>
 </head>
@@ -71,11 +96,54 @@
     </header>
     
     <main>
-        <p>
-            Hello! My name is [Your Name], and I am a [Your Profession/Interest]. 
-            I have a passion for [Your Passion or Hobby], and I enjoy [What You Enjoy Doing]. 
-            This website showcases some of my work and projects. Thank you for visiting!
-        </p>
+        <div class="section">
+            <p>
+                Hello! My name is [Your Name], and I am a [Your Profession/Interest]. 
+                I have a passion for [Your Passion or Hobby], and I enjoy [What You Enjoy Doing]. 
+                This website showcases some of my work and projects. Thank you for visiting!
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="./assets/icons/arcgis-icon.png" alt="ArcGIS Pro">
+                            <div>ArcGIS Pro</div>
+                        </td>
+                        <td>
+                            <img src="./assets/icons/qgis-icon.png" alt="QGIS">
+                            <div>QGIS</div>
+                        </td>
+                        <td>
+                            <img src="./assets/icons/sql-icon.png" alt="SQL">
+                            <div>SQL</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./assets/icons/python-icon.png" alt="Python">
+                            <div>Python</div>
+                        </td>
+                        <td>
+                            <img src="./assets/icons/access-icon.png" alt="MS Access">
+                            <div>MS Access</div>
+                        </td>
+                        <td>
+                            <img src="./assets/icons/surfer-icon.png" alt="Surfer">
+                            <div>Surfer</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Hobbies</h2>
+            <p>In my free time, I enjoy running, reading, hiking, kayaking, and exploring the Pacific Northwest.</p>
+        </div>
     </main>
 
     <!-- FOOTER -->
