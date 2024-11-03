@@ -4,83 +4,210 @@
     <meta charset="utf-8">
     <link rel="icon" href="./assets/images/1311.png" />
     <title>My Portfolio</title>
-    <meta name="description" content="Welcome to my portfolio!">
+    <meta name="description" content="Welcome to my portfolio! Learn more about me, my projects, and my skills.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">  
     <style>
-        body, html {
-            height: 100%;
-            margin: 0;
+        body {
             font-family: 'Sulphur Point', sans-serif;
-            color: white; /* Text color */
-            text-align: center; /* Center text */
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
         }
         .navbar {
             display: flex;
             justify-content: space-around;
-            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 10px 0;
-            position: fixed; /* Fix navbar at the top */
+            position: fixed;
             width: 100%;
-            z-index: 10; /* Ensure it appears above other content */
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .nav-title-link, .button {
+        .nav-title-link {
             text-decoration: none;
-            color: #333; /* Dark text color */
-            padding: 10px;
+            font-size: 1.5em;
         }
-        section {
+        .button {
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        header {
+            margin-top: 70px; /* Space for fixed navbar */
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .section {
+            padding: 20px;
             height: 100vh; /* Full height for each section */
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: rgba(0, 0, 0, 0.5); /* Background for sections */
-            position: relative; /* Allow for content positioning */
+            background-color: #fff;
         }
-        .overlay {
-            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
-            padding: 20px; /* Padding for text */
-            border-radius: 10px; /* Optional: rounded corners */
+        .section h2 {
+            font-family: 'Sulphur Point', sans-serif;
+            font-size: 24px;
+            color: #333;
+        }
+        .section p,
+        .section table {
+            font-family: 'Sulphur Point', sans-serif;
+            font-size: 18px;
+            color: #555;
+            margin: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0; /* Space between sections */
+        }
+        td {
+            padding: 20px; /* Space between icons */
+            text-align: center;
+        }
+        td img {
+            width: 40px;
+            height: 40px;
+            display: block;
+            margin: 0 auto;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 400px);
+            gap: 20px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
     <!-- NAVBAR -->
     <div class="navbar">
-        <a class="nav-title-link" href="./index.html">Index</a>
-        <a class="button" href="./about.html">About</a>
-        <a class="button" href="./projects.html">Cartography</a>
-        <a class="button" href="#./scripts.html">Scripting/Data Viz</a>
-         <a class="button" href="#./resume.html">Resume</a>
-         <a class="button" href="#./contact.html">Contact</a>
+        <a class="nav-title-link" href="#about">About Me</a>
+        <a class="button" href="#resume">Resume</a>
+        <a class="button" href="#projects">Projects</a>
+        <a class="button" href="#scripting">Scripting/Data Viz</a>
+        <a class="button" href="#contact">Contact</a>
     </div>
 
-    <!-- SECTIONS -->
-    <section id="section1">
-        <div class="overlay">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Your tagline or brief introduction goes here.</p>
-        </div>
-    </section>
-    <section id="section2">
-        <div class="overlay">
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="section">
+        <header>
             <h1>About Me</h1>
-            <p>Information about yourself.</p>
+            <p>
+                Hello! My name is [Your Name], and I am a [Your Profession/Interest]. 
+                I have a passion for [Your Passion or Hobby], and I enjoy [What You Enjoy Doing]. 
+                This website showcases some of my work and projects. Thank you for visiting!
+            </p>
+        </header>
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section id="resume" class="section">
+        <header>
+            <h1>Resume</h1>
+        </header>
+        <div class="section">
+            <h2>Skills</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="./assets/images/arcgispro.png" alt="ArcGIS Pro">
+                            <div>ArcGIS Pro</div>
+                        </td>
+                        <td>
+                            <img src="./assets/images/Qgis.png" alt="QGIS">
+                            <div>QGIS</div>
+                        </td>
+                        <td>
+                            <img src="./assets/images/sqlserver.png" alt="SQL">
+                            <div>SQL</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./assets/images/python.png" alt="Python">
+                            <div>Python</div>
+                        </td>
+                        <td>
+                            <img src="./assets/images/msaccess.png" alt="MS Access">
+                            <div>MS Access</div>
+                        </td>
+                        <td>
+                            <img src="./assets/images/surfer.png" alt="Surfer">
+                            <div>Surfer</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Hobbies</h2>
+            <p>In my free time, I enjoy running, reading, hiking, kayaking, and exploring the Pacific Northwest.</p>
         </div>
     </section>
-    <section id="section3">
-        <div class="overlay">
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section">
+        <header>
             <h1>Projects</h1>
-            <p>Details about your projects.</p>
+            <p>Click on images to see more</p>
+        </header>
+        <div class="gallery">
+            <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/DeerHabitat.png" alt="Deer Habitat Project"></a>
+            <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/OspreyMigration.png" alt="Osprey Migration Project"></a>
+            <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/BearRiver_med.png" alt="Bear River Project"></a>
+            <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/NHConservation.png" alt="NH Conservation Project"></a>
+            <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/DeerHabitat.png" alt="Deer Habitat Project"></a>
+            <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/OspreyMigration.png" alt="Osprey Migration Project"></a>
         </div>
     </section>
-    <section id="section4">
-        <div class="overlay">
-            <h1>Contact</h1>
-            <p>How to get in touch.</p>
+
+    <!-- SCRIPTING SECTION -->
+    <section id="scripting" class="section">
+        <header>
+            <h1>Scripting/Data Viz</h1>
+            <p>Click on images to see more</p>
+        </header>
+        <div class="gallery">
+            <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/CA_Wildfires.png" alt="CA Wildfires"></a>
+            <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/OspreyMigration.png" alt="Osprey Migration"></a>
+            <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/BearRiver_med.png" alt="Bear River"></a>
+            <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/NHConservation.png" alt="NH Conservation"></a>
+            <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/DeerHabitat.png" alt="Deer Habitat"></a>
+            <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/OspreyMigration.png" alt="Osprey Migration"></a>
         </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer style="text-align: center; margin: 20px 0;">
+        <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
+            <img src="./assets/icons/twitter.svg" class="footer-icon" alt="Twitter"/>
+        </a>
+        <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
+            <img src="./assets/icons/mail.svg" class="footer-icon" alt="Email"/>
+        </a>
+    </footer>
 
     <script>
         // Smooth scrolling behavior for internal links
@@ -88,10 +215,4 @@
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+                    behavior
