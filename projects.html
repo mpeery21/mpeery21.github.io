@@ -2,171 +2,200 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>Cartography Gallery</title>
+    <link rel="icon" href="./assets/images/1311.png" />
+    <title>My Portfolio</title>
+    <meta name="description" content="Welcome to my portfolio!">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">
     <style>
-        /* General Styles */
-        body {
-            font-family: 'Sulphur Point', sans-serif;
+        body, html {
+            height: 100%;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
+            font-family: 'Sulphur Point', sans-serif;
+            color: black;
             text-align: center;
+        }
+        .index-section {
+            height: 100vh;
+            background-image: url('./assets/images/mountains.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.5);
             padding: 20px;
+            border-radius: 10px;
+        }
+        .index-section h1 {
+            font-size: 6em;
+        }
+        .index-section p {
+            font-size: 3em;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+        .nav-title-link, .button {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #333;
+            transition: all 0.3s;
+        }
+        .button {
+            padding: 5px 10px;
+        }
+        .button:hover {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+        }
+        .section {
+            padding: 60px 20px;
+            min-height: 20vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+        .about-section {
+            background-color: #add8e6;
+            background-size: cover;
+            background-position: center;
+            color: black;
+        }
+        .about-section p {
+            padding: 40px;
+        }
+        .section h1 {
+            font-size: 2.5em;
+        }
+        .section h2 {
+            font-size: 1.8em;
+        }
+        .section p, .section table {
+            font-family: 'Sulphur Point', sans-serif;
+            font-size: 18px;
+            color: #555;
+            margin: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        td {
+            padding: 20px;
+            text-align: center;
+        }
+        td img {
+            width: 40px;
+            height: 40px;
+            display: block;
+            margin: 0 auto;
         }
 
+        /* Gallery Style */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
-            gap: 20px; /* Space between images */
-            padding: 20px;
-            transition: grid-template-columns 0.3s ease;
+            grid-template-columns: repeat(3, 1fr); /* Equal-width columns */
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
         }
 
         .gallery-item {
             position: relative;
             overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: white;
-            transition: transform 0.3s ease;
+            width: 100%;
+            padding-top: 100%; /* Aspect ratio 1:1 to make the images square */
+            background-color: #000; /* Optional: background color if image isn't loaded */
         }
 
         .gallery-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Ensure the entire image is visible */
+            object-fit: cover; /* Image may be cut off but will fill the container */
+            transition: transform 0.3s ease-in-out;
         }
 
-        .gallery-item img:hover {
-            transform: scale(1.05); /* Zoom effect on hover */
-        }
-
-        .loading {
-            text-align: center;
-            font-size: 1.2em;
-            color: #555;
-            padding: 20px;
-        }
-
-        /* Footer Style */
-        .footer {
-            text-align: center;
-            padding: 10px;
-            font-size: 0.8em;
-            background-color: #333;
+        .gallery-item .title-block {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
             color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-align: center;
         }
 
-        /* Responsive Styles */
-        @media screen and (max-width: 600px) {
-            /* For small screens (like phones) */
-            .gallery {
-                grid-template-columns: 1fr; /* Single column layout */
-                padding: 10px;
-            }
-
-            .gallery-item {
-                box-shadow: none; /* Remove shadow for small screens */
-            }
-
-            .loading {
-                font-size: 1em; /* Smaller loading text on mobile */
-            }
-
-            header {
-                padding: 10px;
-            }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
         }
 
-        @media screen and (max-width: 1024px) {
-            /* For tablets and medium-sized screens */
-            .gallery {
-                grid-template-columns: repeat(2, 1fr); /* Two columns layout */
-                gap: 15px;
-            }
+        .footer-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
         }
+
     </style>
 </head>
 <body>
-    <header>
-        <h1>Cartography Gallery</h1>
-    </header>
-
-    <div class="gallery" id="gallery">
-        <!-- Gallery images will be injected here dynamically -->
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a class="button" href="#index">Home</a>
+        <a class="button" href="#about">About Me</a>
+        <a class="button" href="#projects">Cartography</a>
+        <a class="button" href="#scripting">Scripting/Data Viz</a>
+        <a class="button" href="#resume">Resume</a>
+        <a class="button" href="#contact">Contact</a>
     </div>
 
-    <!-- Loading Indicator -->
-    <div id="loading" class="loading" style="display: none;">
-        Loading more maps...
+    <!-- Cartography Section -->
+    <div class="section" id="projects">
+        <h1>Cartography Projects</h1>
+        <div class="gallery">
+            <div class="gallery-item">
+                <a href="./project-pages/Paris_in_5_Mins.html"> <!-- Link to specific project page -->
+                    <img src="./assets/images/paris5mins_small.png" alt="Map 1">
+                    <div class="title-block">Paris in a 5 Minute Walk</div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./project-pages/OspreyMigration.html"> <!-- Link to specific project page -->
+                    <img src="./assets/images/Osprey_Migration.gif" alt="Map 2">
+                    <div class="title-block">Osprey Migration Routes</div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./project-pages/BearRiver.html"> <!-- Link to specific project page -->
+                    <img src="./assets/images/BearRiver_med.png" alt="Bear River Digital Elevation Model">
+                    <div class="title-block">Bear River Digital Elevation Model</div>
+                </a>
+            </div>
+            <!-- Add more gallery items as needed -->
+        </div>
     </div>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>&copy; 2024 Madeline Peery. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Simulated list of map images and links for the demo
-        const maps = [
-            { src: './assets/images/paris5mins_small.png', link: './project-pages/Paris_in_5_Mins.html' },
-            { src: './assets/images/Osprey_Migration.gif', link: './project-pages/OspreyMigration.html' },
-            { src: './assets/images/BearRiver_med.png', link: './project-pages/BearRiver.html' },
-            { src: './assets/images/NHConservation.png', link: './project-pages/NHConservation.html' },
-            { src: './assets/images/map5.jpg', link: './maps/map5.html' },
-            // Add more map objects as needed
-        ];
-
-        // Variables for infinite scroll
-        let currentIndex = 0;
-        const loadCount = 4; // Number of images to load at a time
-        const gallery = document.getElementById('gallery');
-        const loadingIndicator = document.getElementById('loading');
-
-        // Function to load the gallery items
-        function loadGalleryItems() {
-            // Hide the loading indicator initially
-            loadingIndicator.style.display = 'none';
-
-            // Load the next set of images
-            const endIndex = Math.min(currentIndex + loadCount, maps.length);
-            for (let i = currentIndex; i < endIndex; i++) {
-                const map = maps[i];
-                const div = document.createElement('div');
-                div.classList.add('gallery-item');
-                div.innerHTML = `
-                    <a href="${map.link}">
-                        <img src="${map.src}" alt="Map ${i + 1}">
-                    </a>
-                `;
-                gallery.appendChild(div);
-            }
-
-            // Update current index
-            currentIndex = endIndex;
-
-            // If there are more images to load, show the loading indicator
-            if (currentIndex < maps.length) {
-                loadingIndicator.style.display = 'block';
-            }
-        }
-
-        // Scroll event listener for infinite scroll
-        window.addEventListener('scroll', () => {
-            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100) {
-                if (currentIndex < maps.length) {
-                    loadGalleryItems();
-                }
-            }
-        });
-
-        // Initial load
-        loadGalleryItems();
-    </script>
 </body>
 </html>
