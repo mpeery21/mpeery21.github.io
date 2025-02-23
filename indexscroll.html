@@ -114,15 +114,26 @@
             gap: 20px;
             justify-content: center;
         }
-        .gallery img {
-            width: 400px;
-            height: 400px;
-            object-fit: cover;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
+        .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain; /* Ensure the whole image is visible without cropping */
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+
         }
         .social-icons {
             display: flex;
