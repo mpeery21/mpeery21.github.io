@@ -2,104 +2,171 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="icon" href="./assets/images/1311.png" />
-    <meta name="description" content="A showcase of my projects.">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/typography.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- Add your font here -->
-    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="./css/utilities.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Cartography Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
-            font-family: Sulphur Point, sans-serif;
-            text-align: center;
-            margin: 20px;
+            font-family: 'Sulphur Point', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
-        h1 {
-            font-family: 'Open Sans', sans-serif; /* Change 'YourDesiredFont' to your preferred font */
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
+
         header {
-            margin-top: 70px; /* Adjust this value to create space */
+            text-align: center;
+            padding: 20px;
         }
+
         .gallery {
             display: grid;
-            grid-template-columns: repeat(3, 400px);
-            gap: 20px;
-            justify-content: center;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Responsive grid */
+            gap: 20px; /* Space between images */
+            padding: 20px;
+            transition: grid-template-columns 0.3s ease;
         }
-        .gallery img {
-            width: 400px;
-            height: 400px;
-            object-fit: cover;
-            cursor: pointer;
-            transition: transform 0.3s;
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            transition: transform 0.3s ease;
         }
-        .gallery img:hover {
-            transform: scale(1.05);
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Ensure the entire image is visible */
         }
-        
-        .navbar {
-    display: flex;
-    justify-content: space-around;
-    background-color: transparent; /* Remove background color */
-    padding: 10px 0;
-    box-shadow: none; /* Remove shadow */
-}
 
-.nav-title-link {
-    text-decoration: none; /* No underline on links */
-    font-size: 1.5em; /* Font size for the title link */
-    color: #333; /* Color of the title link */
-}
+        .gallery-item img:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
 
-.button {
-    text-decoration: none; /* No underline on buttons */
-    padding: 5px 10px; /* Adjusted padding for buttons */
-    color: #333; /* Text color for buttons, matching the title link */
-    background-color: transparent; /* No background color */
-    border: none; /* No border */
-}
+        .loading {
+            text-align: center;
+            font-size: 1.2em;
+            color: #555;
+            padding: 20px;
+        }
 
-.button:hover {
-    /* Optional: Change text color on hover for visibility */
-    color: #0056b3; /* Change color on hover, if desired */
-}
+        /* Footer Style */
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.8em;
+            background-color: #333;
+            color: white;
+        }
 
+        /* Responsive Styles */
+        @media screen and (max-width: 600px) {
+            /* For small screens (like phones) */
+            .gallery {
+                grid-template-columns: 1fr; /* Single column layout */
+                padding: 10px;
+            }
+
+            .gallery-item {
+                box-shadow: none; /* Remove shadow for small screens */
+            }
+
+            .loading {
+                font-size: 1em; /* Smaller loading text on mobile */
+            }
+
+            header {
+                padding: 10px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            /* For tablets and medium-sized screens */
+            .gallery {
+                grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+                gap: 15px;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <a class="nav-title-link" href="./index.html">
-            <span class="nav-title">Portfolio</span>
-        </a>
-        <a class="button" href="./about.html">About Me</a>
-        <a class="button" href="./resume.html">Resume</a>
-        <a class="button" href="./projects.html">Projects</a>
-        <a class="button" href="./scripts.html">Scripting/Data Viz</a>
-        <a class="button" href="./contact.html">Contact</a>
-    </div>
-    
     <header>
-        <h1>CARTOGRAPHY</h1>
-        <p>Click on images to see more</p>
+        <h1>Cartography Gallery</h1>
     </header>
-    
-    <div class="gallery">
-        <a href="./project-pages/Paris_in_5_Mins.html"><img src="./assets/images/paris5mins_small.png"></a>
-        <a href="./project-pages/OspreyMigration.html"><img src="./assets/images/Osprey_Migration.gif"></a>
-        <a href="./project-pages/BearRiver.html"><img src="./assets/images/BearRiver_med.png"></a>
-        <a href="./project-pages/NHConservation.html"><img src="./assets/images/NHConservation.png"></a>
-        <a href="./project-pages/Paris_in_5_Mins.html"><img src="./assets/images/Paris_in_5_mins.png"></a>
-        <a href="./project-pages/CA Wildfires.html"><img src="./assets/images/OspreyMigration.png"></a>
+
+    <div class="gallery" id="gallery">
+        <!-- Gallery images will be injected here dynamically -->
     </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="loading" style="display: none;">
+        Loading more maps...
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2024 Madeline Peery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simulated list of map images and links for the demo
+        const maps = [
+            { src: './assets/images/paris5mins_small.png', link: './project-pages/Paris_in_5_Mins.html' },
+            { src: './assets/images/Osprey_Migration.gif', link: './project-pages/OspreyMigration.html' },
+            { src: './assets/images/BearRiver_med.png', link: './project-pages/BearRiver.html' },
+            { src: './assets/images/NHConservation.png', link: './project-pages/NHConservation.html' },
+            { src: './assets/images/map5.jpg', link: './maps/map5.html' },
+            // Add more map objects as needed
+        ];
+
+        // Variables for infinite scroll
+        let currentIndex = 0;
+        const loadCount = 4; // Number of images to load at a time
+        const gallery = document.getElementById('gallery');
+        const loadingIndicator = document.getElementById('loading');
+
+        // Function to load the gallery items
+        function loadGalleryItems() {
+            // Hide the loading indicator initially
+            loadingIndicator.style.display = 'none';
+
+            // Load the next set of images
+            const endIndex = Math.min(currentIndex + loadCount, maps.length);
+            for (let i = currentIndex; i < endIndex; i++) {
+                const map = maps[i];
+                const div = document.createElement('div');
+                div.classList.add('gallery-item');
+                div.innerHTML = `
+                    <a href="${map.link}">
+                        <img src="${map.src}" alt="Map ${i + 1}">
+                    </a>
+                `;
+                gallery.appendChild(div);
+            }
+
+            // Update current index
+            currentIndex = endIndex;
+
+            // If there are more images to load, show the loading indicator
+            if (currentIndex < maps.length) {
+                loadingIndicator.style.display = 'block';
+            }
+        }
+
+        // Scroll event listener for infinite scroll
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100) {
+                if (currentIndex < maps.length) {
+                    loadGalleryItems();
+                }
+            }
+        });
+
+        // Initial load
+        loadGalleryItems();
+    </script>
 </body>
 </html>
-
