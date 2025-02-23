@@ -178,7 +178,7 @@
         </header>
     </section>
 
-    <!-- PROJECTS SECTION -->
+  <!-- PROJECTS SECTION -->
 <section id="projects" class="section">
     <header>
         <h1>Projects</h1>
@@ -187,24 +187,71 @@
     <div class="gallery">
         <div class="gallery-item">
             <a href="mpeery21.github.io/projects.html">
-                <img src="./assets/images/Paris_in_5_mins.png" alt="Cartography">
-                <div class="gallery-title">Cartography</div>
+                <div class="gallery-image-container">
+                    <img src="./assets/images/Paris_in_5_mins.png" alt="Cartography" class="gallery-image">
+                    <div class="gallery-title">Cartography</div>
+                </div>
             </a>
         </div>
         <div class="gallery-item">
             <a href="./project-pages/DataViz.html">
-                <img src="./assets/images/data_viz_image.jpg" alt="Data Viz">
-                <div class="gallery-title">Data Viz</div>
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="./project-pages/Presentations.html">
-                <img src="./assets/images/presentations_image.jpg" alt="Presentations">
-                <div class="gallery-title">Presentations</div>
+                <div class="gallery-image-container">
+                    <img src="./assets/images/data_viz_image.jpg" alt="Data Viz" class="gallery-image">
+                    <div class="gallery-title">Data Viz</div>
+                </div>
             </a>
         </div>
     </div>
 </section>
+
+<style>
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+        gap: 20px;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery-image-container {
+        position: relative;
+        width: 300px;
+        height: 300px; /* Fixed size for the square images */
+        overflow: hidden;
+        background-color: #000;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures images cover the container area */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+        color: white;
+        font-size: 1.5em;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .gallery-item:hover .gallery-image {
+        transform: scale(1.1); /* Optional zoom effect when hovered */
+    }
+</style>
+
 
    
    <!-- RESUME SECTION -->
