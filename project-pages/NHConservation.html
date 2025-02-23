@@ -1,119 +1,71 @@
-
-
-<!-- 
-  IMPORTANT! 
-  
-  Keep this file unchanged to use as a template for all future project pages. 
-
-  For every new project you add to your portfolio, make a copy of this file in the
-  'project-pages' folder with a name related to the project.
--->
-
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-    <!-- 
-      TODO
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bear River Digital Elevation Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
 
-      Upload your Unemployable (or whatever photo you like) to the assets/images folder
-      and change the name of the image below to match the uploaded one
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
 
-      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+        .image-container {
+            flex: 1;
+            background-color: #ADD8E6; /* Light blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-      This should be the same across all pages.
-     -->
-     <link rel="icon" href="../assets/images/NHConservation.png" />
-     <title>New Hampshire Conservation Lands</title>
-    <meta name="description" content="NH Conservation Lands.">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        .image-container img {
+            max-width: 80%;
+            height: auto;
+        }
 
-		<link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/typography.css">
-    <link rel="stylesheet" href="../css/utilities.css">
+        .text-container {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-		<script defer src="../js/script.js"></script>
-	</head>
-	<body>
-    <!-- NAVBAR -->
-    <div class="navbar">
-      <a class="nav-title-link" href="../index.html">
-        <!-- 
-          TODO - Change the "Portfolio Title" to whatever you want displayed in the top left
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
 
-          (this should be the same across all pages)
-         -->
-        <span class="nav-title">Portfolio</span>
-        <!-- 
-          TODO - Change the email after 'mailto:' to your email address for contact 
-        
-          (this should be the same across all pages)
-        -->
-        <a class="button" href="mailto:whitevans.eth@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
-      </a>
-    </div>
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
 
-    <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
-
-      <!-- PROJECT HEADER -->
-      <div id="project-header">
-          <!-- 
-            TODO
-
-            - Change the 'main-title' text to the name of your project
-            - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
-            - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
-          -->
-        <div class="main-title">New Hampshire Conservation Lands</div>
-        <div class="body-text">A summary of my summer fellowship with The Nature Conservancy for summer 2021.</div>
-        <image class="project-header-image" src="../assets/images/NHConservation.png">
-      </div>
-
-      <!-- PROJECT DETAILS -->
-      <!-- 
-        TODO
-
-        - Change the 'subheader-text' to whatever header you want for project details
-        - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
-      -->
-      <div id="project-details">
-        <div class="subheader-text">Project Details</div>
-        <div class="project-details-content">
-          <div class="body-text">I'm grateful to have been a part of the University of New Hampshire's Sustainability Fellows summer program, in which I worked with The Nature Conservancy of New Hampshire as their GIS fellow. This project consisted of working with the state of New Hampshire's data repository, GRANIT, in updating the public and conservations lands dataset.</div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://mpeery21.github.io/assets/images/Paris_in_5_mins.png">
         </div>
-      </div>
-
-    <!-- FOOTER -->
-    <div id="footer">
-      <!-- 
-        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
-
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-        <image src="../assets/icons/instagram.svg" class="footer-icon"/>
-      </a>
-      <!-- 
-        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-        <image src="../assets/icons/twitter.svg" class="footer-icon"/>
-      </a>
-      <!-- 
-        TODO - Change the email after "mailto" to your contact email 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
-        <image src="../assets/icons/mail.svg" class="footer-icon"/>
-      </a>
+        <div class="text-container">
+            <h1>Paris in 5 Minutes</h1>
+            <p>This project focuses on creating a Digital Elevation Model (DEM) for the Bear River region. We analyze the elevation data to assist in conservation efforts and land-use planning, ensuring the natural landscape is preserved while providing vital data for future projects.</p>
+        </div>
     </div>
 
-	</body>
+</body>
 </html>
